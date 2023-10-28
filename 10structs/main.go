@@ -8,7 +8,7 @@ func main() {
 	//no inheritence , no Super or Parent
 
 	shubhankar := User{"Shubhankar", "shubhankar@intellohire.com", true, 22}
-	fmt.Println(shubhankar)
+	shubhankar.GetStatus()
 }
 
 type User struct {
@@ -16,4 +16,8 @@ type User struct {
 	Email  string
 	Status bool
 	Age    int
+}
+
+func (u User) GetStatus() {
+	fmt.Println("is User active: ", u.Status)
 }
